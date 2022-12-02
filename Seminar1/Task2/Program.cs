@@ -7,6 +7,6 @@ Console.Write("Введите второе число: ");
 int m = Convert.ToInt32(Console.ReadLine());
 
 if (n >= m)
-Console.WriteLine(n);
+    Console.WriteLine(n);
 else
-Console.WriteLine(m);
+    Console.WriteLine(m);
