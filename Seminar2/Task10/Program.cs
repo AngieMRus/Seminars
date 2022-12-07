@@ -4,14 +4,8 @@ Console.Write("Введите трехзначное число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 if (n > 99 && n < 1000)
-{
-    string s = Convert.ToString(n);
-    Console.WriteLine(s[1]);
-}
+    Console.WriteLine((n % 100) / 10);
 else if (n < -99 && n > -1000)
-{
-    string s = Convert.ToString(n);
-    Console.WriteLine(s[2]);
-}
+    Console.WriteLine(-(n % 100) / 10);
 else
     Console.WriteLine("Неверные исходные данные. Повторите попытку.");
