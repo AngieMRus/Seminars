@@ -14,6 +14,5 @@ if (ch.Length == 5)
     else
         Console.WriteLine("Данное число НЕ является палиндромом. Увы!");
 }
-
 else
     Console.WriteLine("Неверные исходные данные. Повторите попытку.");
