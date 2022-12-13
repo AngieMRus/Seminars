@@ -22,7 +22,6 @@ Console.Clear();
 Console.Write("Введите кол-во элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[] array = new int[n];
-
 InputArray(array);
 Console.WriteLine($"Mассив: [{string.Join(", ", array)}]");
 Console.WriteLine($"Количество четных чисел: {ReleaseArray(array)}");
