@@ -1,4 +1,4 @@
-﻿void InputArray(int[] array)
+﻿void InputArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
         array[i] = new Random().Next(-100, 101);
@@ -7,7 +7,7 @@
 
 Console.Clear();
 
-int[] array = new int[10];
+double[] array = new double[10];
 InputArray(array);
 Console.WriteLine($"Mассив: [{string.Join(", ", array)}]");
 
