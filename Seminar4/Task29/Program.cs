@@ -1,22 +1,10 @@
 ﻿Console.Clear();
 
-Console.Write("Введите число: ");
+Console.Write("Введите кол-во элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Введите {n} элемент(-а / -ов) массива через пробелы: ");
+int[] numbers = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
 
-int sum = 0;
-
-if (n > 0)
-{
-    for (int count = 0; n > 0; count++)
-        sum = sum + n % 10;
-    Console.WriteLine(sum);
-}
-
-else if (n < 0)
-{
-    for (int count = 0; n < 0; count++)
-        sum = (sum + n % 10) * (-1);
-    Console.WriteLine(sum);
-}
-
-else Console.WriteLine("0");
+if (numbers.Length == n)
+    Console.WriteLine($"Mассив: [{string.Join(", ", numbers)}]");
+else Console.WriteLine("Несовпадение количества элементов массива. Повторите попытку.");
