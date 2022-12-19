@@ -1,15 +1,11 @@
 ﻿Console.Clear();
 
 Console.Write("Введите число: ");
-int n = Convert.ToInt32(Console.ReadLine());
+double n = Convert.ToInt32(Console.ReadLine());
+double sum = 0;
 
-int sum = 0;
-int count = 0;
-
-while (n > 0 || n < 0)
+while (n >= 1 || n <= (-1))
 {
-    sum = sum + n % 10;
-    count++;
+    sum += n % 10;
+    Console.WriteLine($"Сумма цифр в исходном числе: {sum}");
 }
-
-Console.WriteLine($"Сумма цифр в исходном числе: {sum}");
