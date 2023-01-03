@@ -12,5 +12,7 @@
 }
 
 Console.Clear();
-double[,] matrix = new double[3, 4];
+Console.Write("Введите размеры матрицы: ");
+int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+double[,] matrix = new double[size[0], size[1]];
 InputMatrix(matrix);
