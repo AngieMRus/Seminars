@@ -29,7 +29,7 @@ void MeanColumns(int[,] matrix)
             average = average + matrix[i, j];
         }
         average = average / matrix.GetLength(0);
-        Console.WriteLine($"Среднее арифметическое столбца № {j}: {average};");
+        Console.WriteLine($"Среднее арифметическое столбца № {j}: {Math.Round(average, 1)};");
     }
 }
 
@@ -39,6 +39,7 @@ Console.Write("Введите размер двумерного массива: 
 int[] size = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
 int[,] matrix = new int[size[0], size[1]];
 InputMatrix(matrix);
+Console.Clear();
 Console.WriteLine("Двумерный массив: ");
 PrintMatrix(matrix);
 Console.WriteLine();
